@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="StopWatch.css">
+    <title>StopWatch</title>
+</head>
+<body>
+    <header>
+        <nav class="header">
+                <i id="StopWatchicon" class="fa-solid fa-stopwatch">StopWatch</i> 
+            <i id="modeicon" title="Mode" class="fa-solid fa-circle-half-stroke" onclick="toggleDarkMode()"></i>
+            <i id="fullscreenicon" title="Full Screen" class="fa-solid fa-expand" onclick="toggleFullScreen()"></i>
+        </nav>
+    </header>
+    <div class="StopWatch">
+        <div id="circle" class="circle"></div>
+        <h1 id="display">00:00:00</h1>
+        <div class="buttons">
+            <button id="startStopBtn" onclick="startStop()">Start</button>
+            <button id="resetBtn"  onclick="reset()">Reset</button>
+            <button id="labBtn"  onclick="recordLab()">Lab</button>
+        </div>
+    </div>    
+    <div id="labRecords"></div>
+    <script src="StopWatch.js"></script>
+</body>
+</html>

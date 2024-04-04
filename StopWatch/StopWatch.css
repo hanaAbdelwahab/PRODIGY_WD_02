@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+*{
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #000; 
+}
+.header{
+    background-color:lightgray;
+    width:100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2px;
+}
+.header i {
+    font-size: 20px;
+}
+.header i:first-child {
+    margin-right: auto;
+}
+#modeicon{
+    padding-right: 1em;
+}
+#fullscreenicon{
+    padding-right: 9px;
+}
+.dark-mode-b {
+    background-color: rgb(60, 59, 59); /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+}
+.dark-mode-h{
+    background-color: rgb(42, 41, 41);
+    color: rgb(212, 138, 0);
+}
+.dark-mode-stbutton{
+    color: black;
+    background-color: orange;
+    border: 0.2rem solid rgb(245, 172, 76);
+}
+.dark-mode-resetbutton{
+    color: black;
+    background-color: orange;
+    border: 0.2rem solid rgb(245, 172, 76);
+}
+.dark-mode-labbutton{
+    color: black;
+    background-color: orange;
+    border: 0.2rem solid rgb(245, 172, 76);
+}
+
+.StopWatch{
+    position: relative; 
+    min-height: 50vh; 
+    padding-top: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#startStopBtn 
+{
+margin:8px;
+padding:12px;
+font-size:25px;
+border-radius:150%;
+
+}
+#resetBtn 
+{
+margin:8px;
+padding:12px;
+font-size:25px;
+border-radius:150%;
+}
+#labBtn 
+{
+margin:8px;
+padding:12px;
+font-size:25px;
+border-radius:150%;
+}
+#display {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50% ,-50%);
+    z-index: 1; 
+    margin:-20px 10px; 
+    font-size: 4rem; 
+    color: black; 
+}
+.dark-mode-b #display {
+    color: whitesmoke;
+  }
+#labRecords {
+    position: absolute;
+    top: 50%;
+    left: calc(36% + 200px); /* Adjust the value as needed to position it beside the circle */
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: center;
+    max-height: 350px; /* Set maximum height equal to the height of the circle */
+    overflow-y: auto;
+}
+
+#labRecords table {
+    border-collapse: collapse;
+}
+#labRecords th,
+#labRecords td {
+    border: 1px solid black;
+    padding: 10px; /* Adjust padding to increase space between text and border */
+}
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 405px; /* Initial size */
+    height: 400px; /* Initial size */
+    top: 55%;
+    left: 33%;
+    transform: translate(-50%, -50%) rotateX(180deg); /* Make the circle appear backwards */
+    z-index: 0;
+    border: 4px solid transparent; /* Transparent border */
+    animation: shinyBorder 5s infinite linear, waveEffect 10s infinite linear;
+}
+
+@keyframes shinyBorder {
+    0% {
+        border-color: gold;
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        border-color: gold;
+    }
+}
+
+@keyframes waveEffect {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 100px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+.grow {
+    width: 200px;
+    height: 200px;
+    border-width: 4px;
+    transition: all 1s ease-in-out;
+}
+.buttons {
+    position: absolute;
+    top: 60%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the buttons are in front of the circle */
+}
+
+
+
+
